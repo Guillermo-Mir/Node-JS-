@@ -1,0 +1,106 @@
+/* styles.css */
+
+/* Reset y fuente moderna */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f0f4ff, #d9e4ff);
+    color: #2c3e50;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #1f3c88;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header h2 {
+    font-size: 1.3rem;
+    color: #34495e;
+    font-weight: 500;
+}
+
+/* Main Section */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Product List */
+.product-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Book Item Cards */
+.book-item {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    border-top: 5px solid #2575fc;
+}
+
+.book-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+}
+
+.book-item strong {
+    display: block;
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: #1f3c88;
+}
+
+.book-item span {
+    display: block;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 4px;
+}
+
+/* Badges para categorías y precio */
+.book-item span:first-of-type {
+    font-weight: 600;
+    color: #ff6b81;
+}
+
+.book-item span:last-of-type {
+    font-weight: 600;
+    color: #16a085;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header h2 {
+        font-size: 1.1rem;
+    }
+
+    .book-item {
+        padding: 15px;
+    }
+}
